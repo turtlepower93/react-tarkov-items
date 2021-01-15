@@ -4,6 +4,7 @@ import NewOrderPage from '../pages/NewOrderPage/NewOrderPage'
 import AuthPage from '../pages/AuthPage/AuthPage'
 import OrderHistoryPage from '../pages/OrderHistoryPage/OrderHistoryPage'
 import NavBar from '../components/NavBar/NavBar'
+import SignUpForm from '../components/SignUpForm/SignUpForm'
 import { Redirect,Route,Switch } from 'react-router-dom'
 
 
@@ -27,7 +28,10 @@ export default function App() {
           <Redirect to="/orders" />
         </Switch>
         :
-        <AuthPage />
+        <>
+          <AuthPage />
+          <SignUpForm />
+        </>
       }
       </>
     </main>
