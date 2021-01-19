@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { signUp } from '../../utilities/users-services'
 
 export default class SignUpForm extends Component {
 
@@ -17,16 +18,24 @@ export default class SignUpForm extends Component {
     });
 }
 
-    handleSubmit = (evt) => {
+    handleSubmit = async (evt) => {
         evt.preventDefault()
-        alert(JSON.stringify(this.state));
+        try {
+            const formData = {...this.state}; //makes a copy of our state object
+            delete formData.error; //Delete keyword!
+            delete formData.confirm;
+            const user = await signUp(formData); // signUp --> User should be what we return from controller fn
+            console.log(user)
+        } catch {
+            this.setState({ error: 'Sign Up Failed! - Try Again!'})
+        }
     }
 
     render() {
         const disable = this.state.password !== this.state.confirm;
             return (
                 <div>
-                    <div>
+                    <div className="form-container" >
                         <form autoComplete="off" onSubmit={this.handleSubmit}>
                             <label>Name</label>
                             <input type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
