@@ -1,7 +1,12 @@
-import React from 'react' 
+import React, {useState, useEffect, useRef} from 'react'
+import LootList from '../../components/LootList/LootList'
 
-export default function NewOrderPage() {
+export default function NewOrderPage({lootItems}) {
+
     return (
-        <h1>NewOrderPage</h1>
+        <>
+            <h1>New Order Page</h1>
+            <LootList lootItems={lootItems}/>
+        </>
     )
 }
