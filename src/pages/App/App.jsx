@@ -6,6 +6,7 @@ import AuthPage from '../AuthPage/AuthPage'
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage'
 import AddItemPage from '../AddItemPage/AddItemPage'
 import NavBar from '../../components/NavBar/NavBar'
+import { useHistory } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service'
 import { Redirect,Route,Switch } from 'react-router-dom'
 
@@ -16,6 +17,7 @@ export default function App() {
   const [newLoot, setNewLoot] = useState({});
   const [lootItems, setLootItems] = useState([]);
 
+  const history = useHistory();
 
   useEffect(function() {
       async function getItems() {
@@ -26,9 +28,9 @@ export default function App() {
     }, []);
 
   async function addNewLoot(lootData) {
-      console.log(lootData)
-      const loot = await itemsAPI.create(lootData);
-      setNewLoot(loot)
+      const newItem = await itemsAPI.create(lootData);
+      setLootItems([...lootItems, newItem])
+      history.push('/orders/new')
   }
     
 

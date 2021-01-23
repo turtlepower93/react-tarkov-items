@@ -7,9 +7,8 @@ export default function AddItemPage({ addNewLoot }) {
         type: '',
     });
 
-    const formRef = useRef();
-
     function handleSubmit(evt) {
+        evt.preventDefault()
         const newData = {name:evt.target.name.value,type:evt.target.type.value} 
         addNewLoot(newData)
     }

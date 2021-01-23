@@ -39,3 +39,19 @@ button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0
 }
+
+table {
+  margin: 0 auto;
+  background:rgba(43, 30, 30, 0.413);
+  border-radius: 15px;
+  padding:10px;
+}
+
+tr {
+  border: 1px solid black;
+}
+
+td {
+  text-align:left;
+  padding:10px;
+}
