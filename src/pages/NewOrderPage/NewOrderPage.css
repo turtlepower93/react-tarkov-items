@@ -1,0 +1,16 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.add-item-form {
+    grid-column: 1;
+    margin: 20px;
+    align-self: start;
+    justify-self:center;
+}
+
+.display-item {
+    grid-column: 2;
+    
+}

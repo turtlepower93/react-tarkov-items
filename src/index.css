@@ -6,6 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(75, 68, 60);
+  background: url('https://i.pinimg.com/originals/89/ba/b9/89bab90764fe743ee0f18cd5f158435c.jpg');
+  background-size:cover;
   height: 100vh;
 }
 
@@ -21,7 +23,6 @@ html {
 .form-container {
   padding: 3vmin;
   border-radius: 1vmin;
-  margin: 0 20%;
 }
 
 form {
@@ -44,7 +45,8 @@ table {
   margin: 0 auto;
   background:rgba(43, 30, 30, 0.413);
   border-radius: 15px;
-  padding:10px;
+  padding:5px;
+  margin:20px;
 }
 
 tr {

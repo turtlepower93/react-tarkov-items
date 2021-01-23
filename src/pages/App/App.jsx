@@ -41,7 +41,7 @@ export default function App() {
             <NavBar user={user} setUser={setUser} />
             <Switch>
               <Route path="/orders/new">
-                <NewOrderPage lootItems={lootItems}/>
+                <NewOrderPage lootItems={lootItems} addNewLoot={addNewLoot}/>
               </Route>
               <Route path="/orders">
                 <OrderHistoryPage />
