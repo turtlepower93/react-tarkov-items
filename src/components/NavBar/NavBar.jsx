@@ -14,7 +14,6 @@ export default function NavBar({ user, setUser }) {
         <nav>
             <NavLink exact activeStyle={{background:'black'}} to="/orders">Order History</NavLink>
             <NavLink exact activeStyle={{background:'black'}} to="/orders/new">New Order</NavLink>
-            <NavLink exact activeStyle={{background:'black'}} to="/item/create">New Item</NavLink>
             <span>Welcome, {user.name}</span>
             &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>
       </nav>

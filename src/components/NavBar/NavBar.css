@@ -8,12 +8,19 @@ nav {
 a {
     color:white;
     padding:10px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding-top: 20px;
-    font-size:1.4rem;
     font-weight: 600;
 }
 
 a:hover {
     background: rgb(69, 47, 47)
+}
+
+
+span {
+    padding:10px;
+    font-size: 1.1rem;
+    padding-top: 20px;
+    font-weight: 600;
 }
