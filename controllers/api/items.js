@@ -6,12 +6,13 @@ module.exports = {
 }
 
 async function index(req,res) {
-    const items = await Item.find({}).exec()
+    const items = await Item.find({}).sort({createdAt: 'desc'}).exec()
+    // const items = await Item.find({}).sort({createdAt: 'desc'}).exec()
     return res.json(items);
 }
 
 async function create(req,res) {
-    const items = await Item.create(req.body)
+    const item = req.body
+    let items = await Item.create(req.body)
     return res.json(items);
-
 }

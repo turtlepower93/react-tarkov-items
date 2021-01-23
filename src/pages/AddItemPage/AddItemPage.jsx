@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react' 
+import './AddItemPage.css'
 
 export default function AddItemPage({ addNewLoot }) {
 
@@ -22,8 +23,9 @@ export default function AddItemPage({ addNewLoot }) {
     }
 
     return (
-        <>
+        <div className="create-item-container">
         <h1>Create An Item</h1>
+        <h5>Trial version... </h5>
         {/* //add submit function that pushes Name and Type back to the server, and to the main page? */}
             <div className="form-container" onSubmit={handleSubmit}>
                 <form>
@@ -37,17 +39,22 @@ export default function AddItemPage({ addNewLoot }) {
                         required
                     />
                     <label>Type:</label>
-                    <input
+                    <select name="type">
+                        <option name="type" value={formData.type}>Provisions</option>
+                        <option name="type" value={formData.type}>Meds</option>
+                        <option name="type" value={formData.type}>Barter</option>
+                    </select>
+                    {/* <input
                         type="text" 
                         name="type" 
                         placeholder="add type here"
                         // value={formData.type}
                         onChange={handleChange}
                         required
-                    />
+                    /> */}
                     <button type="submit">Create Item</button>
                 </form>
             </div>
-        </>
+        </div>
     )
 }

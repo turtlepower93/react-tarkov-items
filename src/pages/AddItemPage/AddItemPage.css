@@ -1,0 +1,7 @@
+.create-item-container {
+    align-self: center;
+    background:rgba(43, 30, 30, 0.813);
+    border-radius: 15px;
+    margin:auto;
+    padding: 6vmin;
+}

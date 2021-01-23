@@ -1,21 +1,27 @@
 import React, {useState, useEffect, useRef} from 'react'
 import LootList from '../../components/LootList/LootList'
+import AddItemPage from '../AddItemPage/AddItemPage'
+import './NewOrderPage.css'
 
-export default function NewOrderPage({lootItems}) {
+export default function NewOrderPage({lootItems, addNewLoot}) {
 
     return (
-        <>
-            <h1>New Order Page</h1>
-            <table>
-                <thead>
-                    <th>Name:</th>
-                    <th>Type:</th>
-                </thead>
-                <tbody>
-                        <LootList lootItems={lootItems}/>
-                </tbody>
-            </table>
-            {/* <LootList lootItems={lootItems}/> */}
-        </>
+        <div className="grid-container">
+            <div className='add-item-form'>
+                <AddItemPage addNewLoot={addNewLoot}/>
+            </div>
+            <div className="display-items">
+                <table>
+                    <thead>
+                        <th>Name:</th>
+                        <th>Type:</th>
+                    </thead>
+                    <tbody>
+                            <LootList lootItems={lootItems}/>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
     )
 }
