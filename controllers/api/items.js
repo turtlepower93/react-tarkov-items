@@ -2,7 +2,8 @@ const Item = require('../../models/item')
 
 module.exports = {
     index,
-    create
+    create,
+    show,
 }
 
 async function index(req,res) {
@@ -16,3 +17,8 @@ async function create(req,res) {
     let items = await Item.create(req.body)
     return res.json(items);
 }
+
+async function show(req, res) {
+    const item = await Item.findById(req.params.id);
+    res.status(200).json(item);
+  }

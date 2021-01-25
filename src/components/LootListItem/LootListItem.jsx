@@ -1,9 +1,8 @@
 import React, {useState, useEffect, useRef} from 'react'
+import { Link } from 'react-router-dom'
 import './LootListItem.css'
 
 export default function LootListItem({ lootItem }) {
-
-
 
     return (
         <>
@@ -13,6 +12,7 @@ export default function LootListItem({ lootItem }) {
                     <>
                         <td>{lootItem.name}</td> 
                         <td>{lootItem.type} 💊</td>
+                        <Link to={{ pathname: '/details', state:{lootItem}}}> Details </Link>
                     </> : <></>
                 }
                 {
@@ -20,6 +20,7 @@ export default function LootListItem({ lootItem }) {
                     <>
                         <td>{lootItem.name}</td> 
                         <td>{lootItem.type} 🍔</td>
+                        <Link to={{ pathname: '/details', state:{lootItem}}}> Details </Link>
                     </> : <></>
                 }
                 {
@@ -27,6 +28,7 @@ export default function LootListItem({ lootItem }) {
                     <>
                         <td>{lootItem.name}</td> 
                         <td>{lootItem.type} 💰</td>
+                        <Link to={{ pathname: '/details', state:{lootItem}}}> Details </Link>
                     </> : <></>
                 }
         </tr>
