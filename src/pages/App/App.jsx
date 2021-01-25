@@ -4,7 +4,8 @@ import * as itemsAPI from '../../utilities/items-api'
 import NewOrderPage from '../NewOrderPage/NewOrderPage'
 import AuthPage from '../AuthPage/AuthPage'
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage'
-import ItemDetailPage from '../ItemDetailPage/ItemDetailPage'
+// import ItemDetailPage from '../ItemDetailPage/ItemDetailPage
+import ShowItemsPage from '../ShowItemPage/ShowItemPage'
 import AddItemPage from '../AddItemPage/AddItemPage'
 import NavBar from '../../components/NavBar/NavBar'
 import { useHistory } from 'react-router-dom';
@@ -51,7 +52,7 @@ export default function App() {
                 <AddItemPage addNewLoot={addNewLoot}/>
               </Route>
               <Route exact path='/details'>
-                <ItemDetailPage />
+                <ShowItemsPage />
               </Route>
               <Redirect to="/orders/new" />
             </Switch>
