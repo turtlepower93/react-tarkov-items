@@ -7,6 +7,8 @@ export default function AuthPage({ setUser }) {
 
   return (
     <main>
+      <h1 style={{background:'black'}}>Welcome To Prapor Shop of Glorious Item</h1>
+      
       {showLogin ?
         <>
           <h1>Login</h1>
