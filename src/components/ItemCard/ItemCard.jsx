@@ -1,6 +1,4 @@
 import React from 'react';
-import ItemCard from '../../components/ItemCard/ItemCard';
-import {useLocation} from 'react-router-dom';
 import './ItemCard.css'
 
 function ShowItemPage({item}) {

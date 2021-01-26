@@ -1,0 +1,9 @@
+.delete-btn {
+    background:tomato;
+    color:white;
+}
+
+td > a {
+    padding-top: 0px;
+    padding:0px 5px;
+}

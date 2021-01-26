@@ -5,6 +5,11 @@ nav {
     background: rgb(44,49,60);
 }
 
+.prapors-shop {
+    margin-right: auto;
+    margin-left:20px;
+}
+
 a {
     color:white;
     padding:10px;

@@ -1,9 +1,8 @@
-import React, {useState, useEffect, useRef} from 'react'
 import LootList from '../../components/LootList/LootList'
 import AddItemPage from '../AddItemPage/AddItemPage'
 import './NewOrderPage.css'
 
-export default function NewOrderPage({lootItems, addNewLoot}) {
+export default function NewOrderPage({lootItems, addNewLoot, handleDeleteItem}) {
 
     return (
         <div className="grid-container">
@@ -13,15 +12,16 @@ export default function NewOrderPage({lootItems, addNewLoot}) {
             <div className="display-items">
                 <table>
                     <thead>
-                        <th>Name:</th>
-                        <th>Type:</th>
+                        <tr>
+                            <th>Name:</th>
+                            <th>Type:</th>
+                        </tr>
                     </thead>
                     <tbody>
-                            <LootList lootItems={lootItems}/>
+                            <LootList lootItems={lootItems} handleDeleteItem={handleDeleteItem}/>
                     </tbody>
                 </table>
             </div>
         </div>
-
     )
 }
